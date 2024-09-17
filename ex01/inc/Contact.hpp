@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 22:15:55 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/16 22:16:23 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/17 23:07:54 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ class Contact
 {
 	private:
 		static std::string	_fields_name[5];
-		std::string			_informations[11];
+		std::string			_informations[5];
 
 		enum Field {
 			FirstName = 0,
@@ -35,7 +35,7 @@ class Contact
 		Contact(void);
 		~Contact(void);
 
-		bool	set_contact();
+		bool	set_contact(void);
 		void	get_contact(int index)const;
 };
 
