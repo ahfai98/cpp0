@@ -6,7 +6,7 @@
 /*   By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/16 22:19:08 by jyap              #+#    #+#             */
-/*   Updated: 2024/09/17 22:47:31 by jyap             ###   ########.fr       */
+/*   Updated: 2024/09/17 23:17:53 by jyap             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,14 @@ int main(void)
 
 	PhoneBook.show_instruction();
 	std::cout << "$>";
-	while (std::getline(std::cin, command))
+	std::getline(std::cin, command);
+	while (1)
 	{
+		if (std::cin.eof() == true)
+		{
+			std::cout << "You Pressed ^D. Exiting PhoneBook ..." << std::endl;
+			std::exit(0);
+		}
 		for (size_t i = 0; i < command.length(); ++i)
 			command[i] = std::toupper(command[i]);
 		if (command.compare("ADD") == 0)
@@ -37,7 +43,7 @@ int main(void)
 		command.clear();
 		PhoneBook.show_instruction();
 		std::cout << "$>";
+		std::getline(std::cin, command);
 	}
-	std::cout << "You Pressed ^D. Exiting PhoneBook ..." << std::endl;
 	return (0);
 }
