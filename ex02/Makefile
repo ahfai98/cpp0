@@ -5,8 +5,8 @@
 #                                                     +:+ +:+         +:+      #
 #    By: jyap <jyap@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2024/09/16 22:07:08 by jyap              #+#    #+#              #
-#    Updated: 2024/09/18 08:45:02 by jyap             ###   ########.fr        #
+#    Created: 2024/09/18 08:51:12 by jyap              #+#    #+#              #
+#    Updated: 2024/09/18 08:54:36 by jyap             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,14 +16,14 @@ OBJ_DIR = obj/
 
 INC_DIR = inc/
 
-SRC_FILES	= main.cpp PhoneBook.cpp Contact.cpp
+SRC_FILES	= tests.cpp Account.cpp
 
 OBJ_FILES	= $(SRC_FILES:.cpp=.o)
 
 SRC			=	$(addprefix $(SRC_DIR), $(SRC_FILES))
 OBJ			=	$(addprefix $(OBJ_DIR), $(OBJ_FILES))
 
-NAME = phonebook
+NAME = program
 
 CC = c++
 

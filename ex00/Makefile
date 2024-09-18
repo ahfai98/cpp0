@@ -1,6 +1,6 @@
 SRC = megaphone.cpp
 NAME = megaphone
-CC = c++ -Wall -Wextra -Werror -std=c++98
+CC = c++ -Wall -Wextra -Werror -std=c++98 -pedantic
 
 all: $(NAME)
 
